@@ -1,0 +1,249 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Vehicle enforcement data for Great Britain",
+  "description": "Vehicle enforcement checks at roadside and operators' premises",
+  "creator": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency",
+  "publisher": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "keywords": [
+    "cars",
+    "buses",
+    "vans",
+    "lorries",
+    "motorcycles",
+    "licence",
+    "checks",
+    "penalties",
+    "prohibitions"
+
+  ],
+  "columns": {
+    "Financial year": false,
+    "Period": false,
+    "Fin-period": {
+      "from_template": "government-quarter"
+    },
+    "Great Britain or Non-Great Britain": false,
+    "Mechanical checks": {
+        "type": "observations",
+        "data_type": "integer",
+        "measure": {
+          "label": "Mech-Chcks",
+          "description": "The number of mechanical spot checks on vehicles during the quarter",
+          "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+        },
+        "unit": {
+          "label": "integer",
+          "from_existing": "http://qudt.org/vocab/unit/NUM"
+        }
+      },
+    "obsStatus1": {
+        "from_template": "observation-status",
+        "describes_observations": "Mechanical checks"
+      },
+    "Mechanical prohibitions issued": {
+        "type": "observations",
+        "data_type": "integer",
+        "measure": {
+          "label": "Mech-prohib",
+          "description": "The number of mechanical prohibitions issued during the quarter",
+          "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+        },
+        "unit": {
+          "label": "integer",
+          "from_existing": "http://qudt.org/vocab/unit/NUM"
+        }
+      },
+    "obsStatus2": {
+        "from_template": "observation-status",
+        "describes_observations": "Mechanical prohibitions issued"
+      },
+    "Mechanical prohibition rate": {
+      "type": "observations",
+      "data_type": "float",
+      "measure": {
+        "label": "Mch-p-rte",
+        "description": "Percentage rate of mechanical prohibitions issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "unit": {
+        "label": "float",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus3": {
+        "from_template": "observation-status",
+        "describes_observations": "Mechanical prohibition rate"
+      },
+    "Traffic checks": {
+        "type": "observations",
+        "data_type": "integer",
+        "measure": {
+          "label": "Trff-Chcks",
+          "description": "The number of traffic spot checks on vehicles during the quarter",
+          "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+        },
+        "unit": {
+          "label": "integer",
+          "from_existing": "http://qudt.org/vocab/unit/NUM"
+        }
+      },
+    "obsStatus4": {
+        "from_template": "observation-status",
+        "describes_observations": "Traffic checks"
+      },
+    "Drivers' hours prohibitions issued": {
+        "type": "observations",
+        "data_type": "integer",
+        "measure": {
+          "label": "Dr_hrs_PI",
+          "description": "The number of driver prohibition hours issued during the quarter",
+          "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+        },
+        "unit": {
+          "label": "integer",
+          "from_existing": "http://qudt.org/vocab/unit/NUM"
+        }
+      },
+    "obsStatus5": {
+        "from_template": "observation-status",
+        "describes_observations": "Drivers' hours prohibitions issued"
+      },
+    "Drivers' hours prohibition rate": {
+      "type": "observations",
+      "data_type": "float",
+      "measure": {
+        "label": "Dr-hr-P-rte",
+        "description": "Percentage rate of drivers' hours prohibitions issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "unit": {
+        "label": "float",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus6": {
+      "from_template": "observation-status",
+      "describes_observations": "Drivers' hours prohibition rate"
+    },
+    "Offence prohibition": {
+      "type": "observations",
+      "data_type": "integer",
+      "measure": {
+        "label": "Off-prohib",
+        "description": "The number of offence prohibition issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus7": {
+      "from_template": "observation-status",
+      "describes_observations": "Offence prohibition"
+    },
+    "Offence prohibition rate": {
+      "type": "observations",
+      "data_type": "float",
+      "measure": {
+        "label": "Off-P-rte",
+        "description": "Percentage rate of offence prohibitions issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "unit": {
+        "label": "float",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus8": {
+      "from_template": "observation-status",
+      "describes_observations": "Offence prohibition rate"
+    },
+    "Weight checks": {
+      "type": "observations",
+      "data_type": "integer",
+      "measure": {
+        "label": "Wght_chcks",
+        "description": "The number of weight checks carried out during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus9": {
+      "from_template": "observation-status",
+      "describes_observations": "Weight checks"
+    },
+    "Overload prohibitions issued": {
+      "type": "observations",
+      "data_type": "integer",
+      "measure": {
+        "label": "Ovld-p-iss",
+        "description": "The number of overload prohibitions issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus10": {
+      "from_template": "observation-status",
+      "describes_observations": "Overload prohibitions issued"
+    },
+    "Overload prohibition rate": {
+      "type": "observations",
+      "data_type": "float",
+      "measure": {
+        "label": "Ovld-P-iss",
+        "description": "Percentage rate of overload prohibitions issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "unit": {
+        "label": "float",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus11": {
+      "from_template": "observation-status",
+      "describes_observations": "Overload prohibition rate"
+    },
+    "Fixed penalties": {
+      "type": "observations",
+      "data_type": "integer",
+      "measure": {
+        "label": "Fxd_pnlty",
+        "description": "The number of fixed penalties issued during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus12": {
+      "from_template": "observation-status",
+      "describes_observations": "Fixed penalties"
+    },
+    "Penalty amount": {
+      "type": "observations",
+      "data_type": "float",
+      "measure": {
+        "label": "Pen_amnt",
+        "description": "Amount of penalty amount charged during the quarter",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#monetary-count"
+      },
+      "unit": {
+        "label": "Currency",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "obsStatus13": {
+      "from_template": "observation-status",
+      "describes_observations": "Penalty amount"
+    }
+  }
+}
